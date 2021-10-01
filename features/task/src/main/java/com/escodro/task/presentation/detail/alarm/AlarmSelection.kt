@@ -235,12 +235,13 @@ private fun AlarmPermissionDialog(
                 }
                 context.startActivity(intent)
             }
+            onCloseDialog()
         }
     )
     AlkaaDialog(
         arguments = arguments,
         isDialogOpen = isDialogOpen,
-        onCloseDialog = onCloseDialog
+        onDismissRequest = onCloseDialog
     )
 }
 
