@@ -13,9 +13,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.RadioButton
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -44,6 +44,7 @@ internal fun TaskItem(
 ) {
     Card(
         elevation = 4.dp,
+        backgroundColor = MaterialTheme.colorScheme.surfaceVariant,
         modifier = modifier
             .fillMaxWidth()
             .padding(all = 8.dp)
@@ -61,7 +62,7 @@ internal fun TaskItem(
             Column(modifier = modifier.fillMaxHeight(), verticalArrangement = Arrangement.Center) {
                 Text(
                     text = task.task.title,
-                    style = MaterialTheme.typography.body1,
+                    style = MaterialTheme.typography.bodyLarge,
                     overflow = TextOverflow.Ellipsis,
                     maxLines = 1
                 )
@@ -76,7 +77,7 @@ internal fun CardRibbon(colorInt: Int?, modifier: Modifier = Modifier) {
     val ribbonColor = if (colorInt != null) {
         Color(colorInt)
     } else {
-        MaterialTheme.colors.background
+        MaterialTheme.colorScheme.surfaceVariant
     }
 
     Spacer(
@@ -102,7 +103,7 @@ internal fun RelativeDateText(calendar: Calendar?) {
 
     Text(
         text = stringTime,
-        style = MaterialTheme.typography.body2,
+        style = MaterialTheme.typography.bodySmall,
         overflow = TextOverflow.Ellipsis,
         maxLines = 1
     )

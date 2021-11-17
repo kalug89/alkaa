@@ -6,11 +6,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Button
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -38,13 +37,11 @@ import org.koin.androidx.compose.getViewModel
 /**
  * Alkaa Add Task Bottom Sheet.
  */
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun AddTaskBottomSheet(onHideBottomSheet: () -> Unit) {
     AddTaskLoader(onHideBottomSheet = onHideBottomSheet)
 }
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 internal fun AddTaskLoader(
     addTaskViewModel: AddTaskViewModel = getViewModel(),
@@ -96,7 +93,6 @@ internal fun AddTaskLoader(
     }
 }
 
-@OptIn(ExperimentalMaterialApi::class)
 @Suppress("UndocumentedPublicFunction")
 @Preview
 @Composable
@@ -106,7 +102,7 @@ fun TaskListScaffoldError() {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(256.dp)
-                .background(MaterialTheme.colors.background)
+                .background(MaterialTheme.colorScheme.background)
         ) {
             AddTaskBottomSheet(onHideBottomSheet = {})
         }
