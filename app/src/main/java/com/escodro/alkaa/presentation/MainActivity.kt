@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.escodro.alkaa.navigation.NavGraph
+import com.escodro.alkaa.rememberWindowSizeClass
 import com.escodro.designsystem.AlkaaTheme
 
 /**
@@ -14,8 +15,9 @@ internal class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
+            val windowSizeClass = rememberWindowSizeClass()
             AlkaaTheme {
-                NavGraph()
+                NavGraph(windowSizeClass)
             }
         }
     }

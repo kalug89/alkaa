@@ -14,6 +14,7 @@ import androidx.navigation.compose.dialog
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import com.escodro.alkaa.WindowSize
 import com.escodro.alkaa.presentation.home.Home
 import com.escodro.navigation.DestinationArgs
 import com.escodro.navigation.DestinationDeepLink
@@ -28,7 +29,7 @@ import com.escodro.task.presentation.detail.main.TaskDetailSection
  * @param startDestination the start destination of the graph
  */
 @Composable
-fun NavGraph(startDestination: String = Destinations.Home) {
+fun NavGraph(windowSizeClass: WindowSize, startDestination: String = Destinations.Home) {
     val navController = rememberNavController()
     val context = LocalContext.current
 
@@ -37,6 +38,7 @@ fun NavGraph(startDestination: String = Destinations.Home) {
 
         composable(Destinations.Home) {
             Home(
+                windowSizeClass = windowSizeClass,
                 onTaskClick = actions.openTaskDetail,
                 onAboutClick = actions.openAbout,
                 onTrackerClick = actions.openTracker
