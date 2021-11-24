@@ -72,7 +72,6 @@ dependencies {
     implementation(Deps.compose.navigation)
     implementation(Deps.compose.activity)
     implementation(Deps.android.playCore)
-    implementation(Deps.android.windowManager)
     implementation(Deps.koin.android)
 
     addComposeDependencies()
