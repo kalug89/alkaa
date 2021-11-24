@@ -34,7 +34,7 @@ object Versions {
     const val compose = "1.1.0-beta03"
     const val composeNav = "2.4.0-alpha10"
     const val composeVm = "1.0.0-alpha07"
-    const val composeActivity = "1.3.1"
+    const val composeActivity = "1.3.0"
 
     const val buildGradle = "7.1.0-alpha08"
 
