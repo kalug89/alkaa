@@ -11,7 +11,7 @@ plugins {
 
 object PluginsVersions {
     const val gradle = "7.2.0-alpha04"
-    const val kotlin = "1.5.30"
+    const val kotlin = "1.5.31"
     const val detekt = "1.17.1"
 }
 
