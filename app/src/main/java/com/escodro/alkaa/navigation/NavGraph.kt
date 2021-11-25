@@ -58,7 +58,7 @@ fun NavGraph(windowSizeClass: WindowSize, startDestination: String = Destination
         }
 
         composable(Destinations.About) {
-            About(onUpPress = actions.onUpPress)
+            About(windowSize = windowSizeClass, onUpPress = actions.onUpPress)
         }
 
         dialog(Destinations.Tracker) {
