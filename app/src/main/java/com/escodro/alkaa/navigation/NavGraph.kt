@@ -29,7 +29,7 @@ import com.escodro.task.presentation.detail.main.TaskDetailSection
  * @param startDestination the start destination of the graph
  */
 @Composable
-fun NavGraph(windowSizeClass: WindowSize, startDestination: String = Destinations.Home) {
+fun NavGraph(windowSize: WindowSize, startDestination: String = Destinations.Home) {
     val navController = rememberNavController()
     val context = LocalContext.current
 
@@ -38,7 +38,7 @@ fun NavGraph(windowSizeClass: WindowSize, startDestination: String = Destination
 
         composable(Destinations.Home) {
             Home(
-                windowSizeClass = windowSizeClass,
+                windowSize = windowSize,
                 onTaskClick = actions.openTaskDetail,
                 onAboutClick = actions.openAbout,
                 onTrackerClick = actions.openTracker
@@ -58,7 +58,7 @@ fun NavGraph(windowSizeClass: WindowSize, startDestination: String = Destination
         }
 
         composable(Destinations.About) {
-            About(windowSize = windowSizeClass, onUpPress = actions.onUpPress)
+            About(windowSize = windowSize, onUpPress = actions.onUpPress)
         }
 
         dialog(Destinations.Tracker) {

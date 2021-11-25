@@ -15,9 +15,9 @@ internal class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            val windowSizeClass = rememberWindowSizeClass()
+            val windowSize = rememberWindowSizeClass()
             AlkaaTheme {
-                NavGraph(windowSizeClass)
+                NavGraph(windowSize)
             }
         }
     }
